@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComputerGini | AI Powered Diagnosis Assistant</title>
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='images/icon.jpg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}" />
+  </head>
+  <body>
+    
+    <div class="chatbot-container">
+      
+      <div class="chatbot-header">
+        <h2>ComputerGini 🤖👨‍💻</h2>
+        <!-- Add your logo or additional header content here -->
+        <div class="button-container">
+          <button id="clear-button">Clear</button>
+          <div id="loading-indicator"></div>
+        </div>
+      </div>
+      
+      <div class="chatbot-messages">
+        <div class="chatbot-message chatbot-response">
+          <p>🌟 Welcome to the world of possibilities with ComputerGini, your personal computer expert chatbot! 🤖</p>
+        </div>
+      </div>
+      <div class="chatbot-input">
+        <form id="chat-form" action="{{ url_for('chatbot') }}" method="POST">
+          <input type="text" id="chat-input" placeholder="Type your question here" autofocus required />
+          <button id="send-button" type="submit">Send</button>
+        </form>
+      </div>
+      
+    </div>
+
+    <script src="{{ url_for('static', filename='script2.js') }}"></script>
+  </body>
+</html>
